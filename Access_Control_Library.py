@@ -1,9 +1,3 @@
-import sys
-
-
-
-
-
 allUsers = {}
 
 #Object to store the name and password of a user
