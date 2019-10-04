@@ -29,13 +29,26 @@ def addUsers(user,password):
 # - Failure: no such user
 # - Failure: bad password
 def Authenticate(user, password):
-    for x in users:
-        if x.user == user:
-            if x.password == password:
-                return "success"
-            else:
-                return "failure"
-    return "failure"
+    print("OK")
+    if user in allUsers.keys():
+        print("OK")
+        print(allUsers[user])
+        if(allUsers[user] == password):
+            print("successfully authenticated")
+            #return "successfully authenticated"
+        else:
+            print("Bad Password")
+            #return "Bad pasword"
+    else:
+        print("Bad User")
+        #return "Bad User"
+    # for x in allUsers:
+    #     if x.user == user:
+    #         if x.password == password:
+    #             return "success"
+    #         else:
+    #             return "failure"
+    # return "failure"
 
 # Add a user to a user group. If the group name does not exist, it is created. If a user does not exist, the function should return an error.
 # The program should report
@@ -65,6 +78,7 @@ while True:
     if (task[0] == "AddUser"):
         addUsers(task[1],task[2])
     elif(task[0] == "Authenticate"):
+        print("OK")
         Authenticate(task[1],task[2])
     elif(task[0] == "AddUserToGroup"):
         addUserToGroup(task[1],task[2])
@@ -76,3 +90,5 @@ while True:
         canAccess(task[1],task[2],task[3])
     elif(task[0] == "Exit"):
         break
+
+    print (allUsers)

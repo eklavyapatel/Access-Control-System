@@ -18,7 +18,7 @@ class User:
         # allUsers[self.name] = self.password
         # #print(allUsers[self.name])
         # return "New user successfully created"
-        
+
 from addUser import *
 from authenticate import *
 from addUserToGroup import *
@@ -33,6 +33,7 @@ while True:
     if (task[0] == "AddUser"):
         addUsers(task[1],task[2])
     elif(task[0] == "Authenticate"):
+        print("OK")
         Authenticate(task[1],task[2])
     elif(task[0] == "AddUserToGroup"):
         addUserToGroup(task[1],task[2])
