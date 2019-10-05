@@ -1,4 +1,5 @@
 #Driver
+from addUser import *
 
 allUsers = {}
 
@@ -19,12 +20,7 @@ class User:
         # #print(allUsers[self.name])
         # return "New user successfully created"
 
-from addUser import *
-from authenticate import *
-from addUserToGroup import *
-from addObjectToGroup import *
-from addAccess import *
-from canAccess import *
+
 
 
 while True:
