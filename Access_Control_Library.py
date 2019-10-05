@@ -1,4 +1,7 @@
 allUsers = {}
+allGroups = ()
+allUserGroups = ()
+
 
 #Object to store the name and password of a user
 class User:
@@ -16,6 +19,9 @@ class User:
         # allUsers[self.name] = self.password
         # #print(allUsers[self.name])
         # return "New user successfully created"
+
+
+
 
 # Define a new user for the system along with the user’s password, both strings.
 # The program should report an error if the user already exists.
@@ -49,6 +55,18 @@ def Authenticate(user, password):
     #         else:
     #             return "failure"
     # return "failure"
+	
+	
+def AddUserToGroup(user, groupname): 
+	if groupname not in allGroups: 
+		if user in allUsers.keys():
+			allGroups = allGroups + groupname
+			allUserGroups = allUserGroups + (user, groupname)
+			print(“Object Added in Group”)
+			print "these are all objects in the group: %s" % (groupnames,)
+	elif
+		return "failure"
+
 
 # Add a user to a user group. If the group name does not exist, it is created. If a user does not exist, the function should return an error.
 # The program should report
