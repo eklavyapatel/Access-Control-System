@@ -5,9 +5,7 @@ from Objects import *
 # - Failure: no such user
 # - Failure: bad password
 def authenticate(user, password):
-    print("OK")
     if user in allUsers.keys():
-        print("OK")
         print(allUsers[user])
         if(allUsers[user] == password):
             print("successfully authenticated")

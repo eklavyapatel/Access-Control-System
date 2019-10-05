@@ -23,16 +23,14 @@ class User:
         # return "New user successfully created"
 
 class Group:
-    
-    groupname = ""
-    
-    def __init__(self, groupname):
-        self.groupname = groupname
+    #groupname = ""
+    def __init__(self, groupName):
+        self.groupName = groupName
+        self.users = []
 
-    def __eq__ (self, other):
-        return self.groupname == other.groupname
+    # def __eq__ (self, other):
+    #     return self.groupName == other.groupName
 
     def makeMember(self,user_to_add):
-        users = []
-        users.append(user_to_add)
-        return "User added to Group"
+        self.users.append(user_to_add)
+        print("Successfully added User to Group.\nCurrent Users:", self.users)
