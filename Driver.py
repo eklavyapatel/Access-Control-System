@@ -19,7 +19,10 @@ while True:
     elif(task[0] == "AddObjectToGroup"):
         addObjectToGroup(task[1],task[2])
     elif(task[0] == "AddAccess"):
-        addAccess(task[1],task[2],task[3])
+        if(task[1] != '' and task[2] != '' and task[3] != ''):
+            addAccess(task[1],task[2],task[3])
+        elif(task[1] != '' and task[2] != ''):
+            addAccessNull(task[1],task[2])
     elif(task[0] == "CanAccess"):
         canAccess(task[1],task[2],task[3])
     elif(task[0] == "Exit"):

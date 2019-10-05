@@ -28,6 +28,7 @@ class Group:
         self.groupName = groupName
         self.users = []
         self.objects = []
+        self.access = []
 
     # def __eq__ (self, other):
     #     return self.groupName == other.groupName
@@ -43,3 +44,9 @@ class Group:
             return print("Object already in group.")
         self.objects.append(object_to_add)
         print("Successfully added Object to Group.\nCurrent Object:", self.objects)
+
+    def addAccess(self, permission):
+        if premission in self.access:
+            return print("User Group already has permission for ",permission)
+        self.access.append(premission)
+        print("Permission successfully granted.\nCurrent Object:", self.access)
