@@ -19,18 +19,3 @@ def addUserToGroup(user_to_add, groupname):
             newGroup.makeMember(user_to_add)
     else:
         print("FAILURE: User does not exist")
-
-
-
-
-    #global allGroups
-    
-    # global allUserGroups
-    # if groupname not in allGroups:
-    #     if user in allUsers.keys():
-    #         allGroups = allGroups + (groupname,)
-    #         allUserGroups = allUserGroups + (user, groupname)
-    #         print ("Obect group object")
-    #         print ("these are all objects in the group: %s" % (allGroups,))
-    #     else:
-    #         return "failure"
