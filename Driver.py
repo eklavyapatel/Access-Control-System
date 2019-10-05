@@ -1,23 +1,10 @@
 #Driver
 from addUser import *
-# allUsers = {}
-
-# #Object to store the name and password of a user
-# class User:
-#     def __init__(self,name,password):
-#         self.name = name
-#         self.password = password
-
-#     def add(self):
-#         if self.name in allUsers.keys():
-#             return "User already exists"
-#         else:
-#             allUsers[self.name] = self.password
-#             #print(allUsers[self.name])
-#             return "New user successfully created"
-#         # allUsers[self.name] = self.password
-#         # #print(allUsers[self.name])
-#         # return "New user successfully created"
+from authenticate import *
+from addUserToGroup import *
+from addObjectToGroup import *
+from addAccess import *
+from canAccess import *
 
 while True:
     command = input("enter command\n")
@@ -26,7 +13,7 @@ while True:
         addUsers(task[1],task[2])
     elif(task[0] == "Authenticate"):
         print("OK")
-        Authenticate(task[1],task[2])
+        authenticate(task[1],task[2])
     elif(task[0] == "AddUserToGroup"):
         addUserToGroup(task[1],task[2])
     elif(task[0] == "AddObjectToGroup"):
