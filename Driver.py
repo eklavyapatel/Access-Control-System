@@ -1,27 +1,23 @@
 #Driver
 from addUser import *
+# allUsers = {}
 
-allUsers = {}
+# #Object to store the name and password of a user
+# class User:
+#     def __init__(self,name,password):
+#         self.name = name
+#         self.password = password
 
-#Object to store the name and password of a user
-class User:
-    def __init__(self,name,password):
-        self.name = name
-        self.password = password
-
-    def add(self):
-        if self.name in allUsers.keys():
-            return "User already exists"
-        else:
-            allUsers[self.name] = self.password
-            #print(allUsers[self.name])
-            return "New user successfully created"
-        # allUsers[self.name] = self.password
-        # #print(allUsers[self.name])
-        # return "New user successfully created"
-
-
-
+#     def add(self):
+#         if self.name in allUsers.keys():
+#             return "User already exists"
+#         else:
+#             allUsers[self.name] = self.password
+#             #print(allUsers[self.name])
+#             return "New user successfully created"
+#         # allUsers[self.name] = self.password
+#         # #print(allUsers[self.name])
+#         # return "New user successfully created"
 
 while True:
     command = input("enter command\n")
