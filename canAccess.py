@@ -4,6 +4,7 @@ from Objects import *
 # As with AddAccess, the program will accept two or three strings. If object is missing, it is considered null and the software allows access only if no object groups were defined for that {operation, usergroupname} set.
 # Note that the parameters here are user names and object names, not user groups and object groups.
 def canAccess(operation,user,object_to_check):
+    return
 
 
 
@@ -13,7 +14,7 @@ def canAccess(operation,user,object_to_check):
 
 
 
-    
+
     # if any(x for x in allUsers if x.name == user):
     #     #user exists so look at the groups, user is in and check the permissions
     #     for i in allUsers:

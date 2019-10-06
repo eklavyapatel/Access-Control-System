@@ -4,7 +4,7 @@ from Objects import *
 # The program should report an error if the user already exists.
 def addUsers(user,password):
     if any(x for x in allUsers if x.name == user):
-        return ":::User already exists"
+        print (":::User already exists")
     else:
         newUser = User(user,password)
         allUsers.append(newUser)
