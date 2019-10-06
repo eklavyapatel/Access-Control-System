@@ -6,6 +6,7 @@ def addAccessNull(operation, userGroupName):
         #group exists so add permission with operation
         newPermission = Permission(userGroupName)
         newPermission.addPermission(operation)
+        allPermissions.append(newPermission)
     else:
         #group doesnt exist
         print(":::Group doesnot exist.")
@@ -15,6 +16,8 @@ def addAccess(operation, userGroupName, objectGroupName):
         #group exists so add permission with operation
         newPermission = Permission(userGroupName)
         newPermission.addPermission(operation)
+        allPermissions.append(newPermission)
+
     else:
         #group doesnt exist
         print(":::Group does not exist.")

@@ -1,23 +1,18 @@
 #Objects
-allUsers = {}
+allUsers = []
 allGroups = []
+allPermissions = []
 
 #Object to store the name and password of a user
 class User:
     def __init__(self,name,password):
         self.name = name
         self.password = password
+        self.groups = []
 
-    def add(self):
-        if self.name in allUsers.keys():
-            return ":::User already exists"
-        else:
-            allUsers[self.name] = self.password
-            #print(allUsers[self.name])
-            return ":::New user successfully created"
-        # allUsers[self.name] = self.password
-        # #print(allUsers[self.name])
-        # return "New user successfully created"
+    def addToGroup(self,groupname):
+        self.groups.append(groupname)
+        return
 
 class Group:
     def __init__(self, groupName):
@@ -48,6 +43,3 @@ class Permission:
             return print(":::User Group already has access to " + operation + " on" + self.objectgroupname)
         self.access.append(operation)
         print(":::Permission to " + operation + self.objectgroupname + " successfully granted.")
-
-    def printAccess():
-        return

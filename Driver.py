@@ -12,7 +12,6 @@ while True:
     if (task[0] == "AddUser"):
         addUsers(task[1],task[2])
     elif(task[0] == "Authenticate"):
-        print("OK")
         authenticate(task[1],task[2])
     elif(task[0] == "AddUserToGroup"):
         addUserToGroup(task[1],task[2])

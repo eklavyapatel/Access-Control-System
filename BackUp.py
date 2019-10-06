@@ -22,9 +22,7 @@ class User:
         # return "New user successfully created"
 
 class Group:
-    
     groupname = ""
-    
     def __init__(self, groupname):
         self.groupname = groupname
 

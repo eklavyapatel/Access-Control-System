@@ -5,16 +5,27 @@ from Objects import *
 # - Failure: no such user
 # - Failure: bad password
 def authenticate(user, password):
-    if user in allUsers.keys():
-        print(allUsers[user])
-        if(allUsers[user] == password):
-            print(":::successfully authenticated")
-            #return "successfully authenticated"
-        else:
-            print(":::Bad Password")
-            #return "Bad pasword"
+    if any(x for x in allUsers if x.name == user):
+        for i in allUsers:
+            if (i.name == user):
+                if(i.password == password):
+                    print(":::successfully authenticated")
+                else:
+                    print(":::Bad Password")
     else:
         print(":::Bad User")
+
+
+    # if user in allUsers.keys():
+    #     print(allUsers[user])
+    #     if(allUsers[user] == password):
+    #         print(":::successfully authenticated")
+    #         #return "successfully authenticated"
+    #     else:
+    #         print(":::Bad Password")
+    #         #return "Bad pasword"
+    # else:
+    #     print(":::Bad User")
         #return "Bad User"
     # for x in allUsers:
     #     if x.user == user:
