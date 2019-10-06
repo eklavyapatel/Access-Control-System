@@ -9,7 +9,7 @@ def addAccessNull(operation, userGroupName):
         allPermissions.append(newPermission)
     else:
         #group doesnt exist
-        print(":::Group doesnot exist.")
+        print(":::Group does not exist.")
 
 def addAccess(operation, userGroupName, objectGroupName):
     if any(x for x in allGroups if x.groupName == userGroupName):
