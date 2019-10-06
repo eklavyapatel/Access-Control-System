@@ -10,15 +10,9 @@ def addUserToGroup(user_to_add, groupname):
             #take object and add user to the group
             for i in allGroups:
                 if(i.groupName == groupname):
-                    print(allUsers)
-                    print("OK")
                     i.makeMember(user_to_add)
-                    print(allUsers)
-                    print("OK")
                     for i in allUsers:
-                        print("OK")
                         if (i.name == user_to_add):
-                            print("OK")
                             #add group to list
                             i.addToGroup(groupname)
         else:

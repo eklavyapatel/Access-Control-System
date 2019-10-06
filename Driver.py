@@ -23,6 +23,11 @@ while True:
         else:
             addAccess(task[1],task[2],task[3])
     elif(task[0] == "CanAccess"):
-        canAccess(task[1],task[2],task[3])
+        if (len(task) ==  3):
+            canAccessNull(task[1],task[2])
+        else:
+            canAccess(task[1],task[2],task[3])
     elif(task[0] == "Exit"):
         break
+    else:
+        print("what the fuck")
