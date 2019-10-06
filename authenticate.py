@@ -8,13 +8,13 @@ def authenticate(user, password):
     if user in allUsers.keys():
         print(allUsers[user])
         if(allUsers[user] == password):
-            print("successfully authenticated")
+            print(":::successfully authenticated")
             #return "successfully authenticated"
         else:
-            print("Bad Password")
+            print(":::Bad Password")
             #return "Bad pasword"
     else:
-        print("Bad User")
+        print(":::Bad User")
         #return "Bad User"
     # for x in allUsers:
     #     if x.user == user:

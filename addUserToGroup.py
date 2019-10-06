@@ -18,4 +18,4 @@ def addUserToGroup(user_to_add, groupname):
             #print(allGroups)
             newGroup.makeMember(user_to_add)
     else:
-        print("FAILURE: User does not exist")
+        print(":::FAILURE: User does not exist")
